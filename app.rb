@@ -8,9 +8,7 @@ class App < Sinatra::Base
 
   post '/piglatinize' do
     @words = PigLatinizer.new
-    @count = @words.count(params[:user_phrase])
-    @one_word = @words.piglatinize(params[:user_phrase])
-    @many_words = @words.to_pig_latin(params[:user_phrase])
+    @piggfied = @words.to_pig_latin(params[:user_phrase])
     erb :piglatinize
   end
 

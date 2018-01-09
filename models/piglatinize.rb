@@ -1,12 +1,7 @@
 class PigLatinizer
 
-  def count(string)
-    string.split(" ").count
-  end
-
   def to_pig_latin(string)
-    words = string.split(" ")
-    words.map {|word| piglatinize(word)}.join(" ")
+    string.split(" ").map {|word| piglatinize(word)}.join(" ")
   end
 
   def piglatinize(string)
